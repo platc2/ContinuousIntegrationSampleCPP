@@ -40,13 +40,12 @@ matrix:
 
 before_install:
   # LunarG SDK
-  - cd /tmp
-  - wget https://sdk.lunarg.com/sdk/download/1.1.77.0/linux/vulkansdk-linux-x86_64-1.1.77.0.tar.gz
-  - cd ~
-  - mkdir vulkan
-  - cd vulkan
+  - wget https://sdk.lunarg.com/sdk/download/1.1.77.0/linux/vulkansdk-linux-x86_64-1.1.77.0.tar.gz /tmp/vulkansdk-linux-x86_64-1.1.77.0.tar.gz
+  - mkdir ~/vulkan
+  - pushd ~/vulkan
   - tar zxf /tmp/vulkansdk-linux-x86_64-1.1.77.0.tar.gz
   - source ~/vulkan/1.1.77.0/setup-env.sh
+  - popd
 
 before_script:
   - mkdir build
