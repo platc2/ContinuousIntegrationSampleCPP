@@ -38,7 +38,7 @@ matrix:
         - CC=gcc-7
         - CXX=g++-7
 
-before_script:
+before_install:
   # LunarG SDK
   - cd /tmp
   - wget https://sdk.lunarg.com/sdk/download/1.1.77.0/linux/vulkansdk-linux-x86_64-1.1.77.0.tar.gz
@@ -48,6 +48,7 @@ before_script:
   - tar zxf /tmp/vulkansdk-linux-x86_64-1.1.77.0.tar.gz
   - source ~/vulkan/1.1.77.0/setup-env.sh
 
+before_script:
   - mkdir build
   - cd build
   - cmake ..
