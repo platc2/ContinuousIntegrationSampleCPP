@@ -1,1 +1,5 @@
 # Sample Project
+
+| Build Status | Compilers |
+| ------------ | --------- |
+| ![Buildstatus](https://api.travis-ci.org/platc2/ContinuousIntegrationSampleCPP.svg?branch=master) | GCC 5, 6, 7 |
