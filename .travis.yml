@@ -40,7 +40,10 @@ matrix:
 
 before_install:
   - sudo apt-get update
+  # Vulkan dependencies
   - sudo apt-get install libglm-dev cmake libxcb-dri3-0 libxcb-present0 libpciaccess0 libpng-dev libxcb-keysyms1-dev libxcb-dri3-dev libx11-dev libmirclient-dev libwayland-dev libxrandr-dev
+  # GLFW dependencies
+  - sudo apt-get install xorg-dev
   # LunarG SDK
   - cd /tmp
   - wget https://sdk.lunarg.com/sdk/download/1.1.77.0/linux/vulkansdk-linux-x86_64-1.1.77.0.tar.gz
