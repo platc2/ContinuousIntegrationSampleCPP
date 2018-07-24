@@ -51,7 +51,7 @@ set(Dependencies ${SourceFiles} ${HeaderFiles} ${VulkanShaders} ${GLSLShaders} $
 if(Dependencies)
 	set(OutputDirectory "${CMAKE_SOURCE_DIR}/${ProjectDirectory}/bin/")
 	add_executable(${ProjectDirectory} ${SourceFiles} ${HeaderFiles} ${VulkanShaders} ${GLSLShaders})
-	set_property(TARGET ${ProjectDirectory} PROPERTY CXX_STANDARD 17)
+	set_property(TARGET ${ProjectDirectory} PROPERTY CXX_STANDARD 11)
 	set_property(TARGET ${ProjectDirectory} PROPERTY CXX_STANDARD_REQUIRED TRUE)
 	set_property(TARGET ${ProjectDirectory} PROPERTY RUNTIME_OUTPUT_DIRECTORY "${OutputDirectory}")
 	target_link_libraries(${ProjectDirectory} glfw Vulkan::Vulkan)
