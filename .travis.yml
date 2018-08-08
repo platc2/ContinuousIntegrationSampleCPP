@@ -13,8 +13,7 @@ matrix:
           packages:
             - g++-5
       env:
-        - CC=gcc-5
-        - CXX=g++-5
+        - MatrixEval='CC=gcc-5 && CXX=g++-5'
     - os: linux
       dist: trusty
       addons:
@@ -24,8 +23,7 @@ matrix:
           packages:
             - g++-6
       env:
-        - CC=gcc-6
-        - CXX=g++-6
+        - MatrixEval='CC=gcc-6 && CXX=g++-6'
     - os: linux
       dist: trusty
       addons:
@@ -35,10 +33,10 @@ matrix:
           packages:
             - g++-7
       env:
-        - CC=gcc-7
-        - CXX=g++-7
+        - MatrixEval='CC=gcc-7 && CXX=g++-7'
 
 before_install:
+  - eval "$MatrixEval"
   - sudo apt-get update
   # Vulkan dependencies
   - sudo apt-get install libglm-dev cmake libxcb-dri3-0 libxcb-present0 libpciaccess0 libpng-dev libxcb-keysyms1-dev libxcb-dri3-dev libx11-dev libmirclient-dev libwayland-dev libxrandr-dev
